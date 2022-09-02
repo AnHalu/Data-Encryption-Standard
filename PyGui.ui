@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1207</width>
+    <height>774</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>591</width>
+      <height>711</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(216, 229, 244);</string>
+    </property>
+    <property name="title">
+     <string>Mã hóa và giải nén file</string>
+    </property>
+    <widget class="QLabel" name="file">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>File:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_2">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Đổi tên file:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_3">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>350</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Khóa:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>40</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(225, 225, 225);
+color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Files</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="inputFile">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>40</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editFile">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>80</y>
+       <width>461</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="khoaInput">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>350</y>
+       <width>461</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_4">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Text: </string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textInput">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>150</y>
+       <width>461</width>
+       <height>181</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_5">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>390</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Kết quả mã hóa và giải mã </string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textOutput">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>420</y>
+       <width>461</width>
+       <height>201</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="maHoa">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>650</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 0);
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Mã hóa văn bản</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="giaiMa">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>650</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(14, 124, 21);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Giải mã văn bản</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>10</y>
+      <width>591</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 226);</string>
+    </property>
+    <property name="title">
+     <string>Chia sẻ khóa</string>
+    </property>
+    <widget class="QLabel" name="file_11">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Khóa</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_12">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Số p</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="inputKhoa1">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>40</y>
+       <width>481</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="soPInput_1">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>80</y>
+       <width>481</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_13">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>V1</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="v1">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>130</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_14">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>V2</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="v2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>170</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_15">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>140</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>a1</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="a1">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>130</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chiaKhoa">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>220</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);
+background-color: rgb(225, 225, 225);</string>
+     </property>
+     <property name="text">
+      <string>Chia khóa</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>270</y>
+       <width>541</width>
+       <height>61</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>380</y>
+      <width>591</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 226);</string>
+    </property>
+    <property name="title">
+     <string>Ghép khóa</string>
+    </property>
+    <widget class="QLabel" name="file_16">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Số p</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="soPInput_2">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>481</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_17">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>(v1.f(v1))</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_18">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>(v2.f(v2))</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="v1_fv1_1">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>80</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="v1_f1_2">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>80</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="v2_fv2_1">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>120</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="v2_fv2_2">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>120</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="khoiPhucKhoa">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>180</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);
+background-color: rgb(225, 225, 225);</string>
+     </property>
+     <property name="text">
+      <string>Khôi phục khóa</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="khoaOutput">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>230</y>
+       <width>481</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_19">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>Khóa</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="hex">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>280</y>
+       <width>481</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_20">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>290</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>HEX</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1207</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
